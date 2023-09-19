@@ -7,6 +7,7 @@ public class PassByValue {
 	
 	public void passByValue(int v)
 	{
+		//Method1
 		System.out.println("Initial Value of a: " + v);
 		v = v+10;
 		System.out.println("Final Value of a: " + v);
@@ -14,6 +15,7 @@ public class PassByValue {
 	
 	public void passByReference(PassByValue ref)
 	{
+		//Method2
 		System.out.println("Initial Value of a: " + ref.a);
 		ref.a = ref.a+10;
 		System.out.println("Final Value of a: " + ref.a);
