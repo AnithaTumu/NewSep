@@ -21,8 +21,19 @@ public class PassByValue {
 		ref.a = ref.a+10;
 		System.out.println("Final Value of a: " + ref.a);
 	}
+	
+	public void passImmutableObj(String b)
+	{
+		//Method3
+				System.out.println("hashcode: " + b.hashCode());
+				System.out.println("Initial Value of s: " + b);
+				b = "Hello" + b;
+				System.out.println("Final Value of s: " + b);
+				System.out.println("Final hashcode: " + b.hashCode());
+	}
 
 	public static void main(String[] args) {
+		
 		PassByValue passByValue = new PassByValue();
 		passByValue.a = 20;
 		System.out.println("Before passByValue method a: " + passByValue.a);
@@ -34,6 +45,12 @@ public class PassByValue {
 		System.out.println("hashcode: " + passByValue.hashCode());
 		passByValue.passByReference(passByValue);
 		System.out.println("After passByReference method of a: " + passByValue.a);	
+		
+		String s = new String("Anitha");
+		System.out.println("Before passImmutableObj method s: " + s);
+		System.out.println("hashcode: " + s.hashCode());
+		passByValue.passImmutableObj(s);
+		System.out.println("After passByReference method of s: " + s);	
 
 	}
 
